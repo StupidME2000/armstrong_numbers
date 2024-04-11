@@ -1,7 +1,7 @@
-def armstrong_numbers():
+def armstrong_numbers(start, end):
     armstrong_numbers_list = []
 
-    for number in range(0, 100001):
+    for number in range(start, end + 1):
         # Count number of digits
         number_str = str(number)
         number_digits = len(number_str)
@@ -16,5 +16,8 @@ def armstrong_numbers():
     return armstrong_numbers_list
 
 if __name__ == "__main__":
-    print("Armstrong numbers within the range of 0 to 100,000:")
-    print(armstrong_numbers())
+    start_range = 0
+    end_range = 100000
+
+    print(f"Armstrong numbers within the range of {start_range} to {end_range}:")
+    print(armstrong_numbers(start_range, end_range))
